@@ -1,15 +1,10 @@
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import javax.xml.parsers.ParserConfigurationException;
-import org.xml.sax.SAXException;
-
 import com.aetrion.flickr.Flickr;
-import com.aetrion.flickr.FlickrException;
 import com.aetrion.flickr.REST;
 import com.aetrion.flickr.photos.SearchParameters;
 import com.aetrion.flickr.photos.Photo;
