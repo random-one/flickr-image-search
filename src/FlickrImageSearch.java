@@ -55,13 +55,17 @@ public class FlickrImageSearch {
 					photoList = photosInterface.search(searchParams, perPage, x);
 					if (photoList != null) {
 						for (int y = 0; y < photoList.size(); y++) {
-							Photo photo = (Photo)photoList.get(y);
-							System.out.println((x * perPage) + y + "/" + totalResults + " url: " + photo.getUrl());
-							// save image to file
-							BufferedImage image = photo.getLargeImage();
-							if (image != null) {
-								File outputfile = new File(f.getPath() + File.separator + photo.getId() + "." + photo.getOriginalFormat());
-								ImageIO.write(image, photo.getOriginalFormat(), outputfile);
+							try {
+								Photo photo = (Photo)photoList.get(y);
+								System.out.println((x * perPage) + y + "/" + totalResults + " url: " + photo.getUrl());
+								// save image to file
+								BufferedImage image = photo.getLargeImage();
+								if (image != null) {
+									File outputfile = new File(f.getPath() + File.separator + photo.getId() + "." + photo.getOriginalFormat());
+									ImageIO.write(image, photo.getOriginalFormat(), outputfile);
+								}
+							} catch (Exception e) {
+								e.printStackTrace();
 							}
 						}
 					}
