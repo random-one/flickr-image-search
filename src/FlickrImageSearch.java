@@ -62,7 +62,7 @@ public class FlickrImageSearch {
 						if (photoList != null) {
 							for (int y = 0; y < photoList.size(); y++) {
 								Photo photo = (Photo)photoList.get(y);
-								System.out.println((x * 2) + y + "/" + totalResults + " url: " + photo.getUrl());
+								System.out.println((x * perPage) + y + "/" + totalResults + " url: " + photo.getUrl());
 								try {
 									// save image to file
 									BufferedImage image = photo.getLargeImage();
