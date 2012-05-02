@@ -67,7 +67,7 @@ public class FlickrImageSearch {
 									// save image to file
 									BufferedImage image = photo.getLargeImage();
 									if (image != null) {
-										File outputfile = new File(f.getPath() + f.separator + photo.getId() + ".png");
+										File outputfile = new File(f.getPath() + File.separator + photo.getId() + ".png");
 										ImageIO.write(image, "png", outputfile);
 									}
 								} catch (IOException e) {
