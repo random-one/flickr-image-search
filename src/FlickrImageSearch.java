@@ -58,7 +58,7 @@ public class FlickrImageSearch {
 				for (int x = 0; x < totalPages; x++) {
 					if (photoList != null){
 						// retrieve each page
-						photoList = photosInterface.search(searchParams, 20, x);
+						photoList = photosInterface.search(searchParams, perPage, x);
 						if (photoList != null) {
 							for (int y = 0; y < photoList.size(); y++) {
 								Photo photo = (Photo)photoList.get(y);
